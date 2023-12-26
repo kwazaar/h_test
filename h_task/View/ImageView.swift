@@ -7,13 +7,12 @@
 
 import SwiftUI
 
-struct ImageStackView: View {
+struct ImageView: View {
     
-    @ObservedObject var imageCachingService: ImageCachingService
+    @ObservedObject var imageCachingService = ImageCachingService()
     let imageURL: URL
     
-    init(imageCachingService: ImageCachingService, imageURL: URL) {
-        self.imageCachingService = ImageCachingService()
+    init(imageURL: URL) {
         self.imageURL = imageURL
         self.imageCachingService.loadImage(from: imageURL)
     }
@@ -22,10 +21,13 @@ struct ImageStackView: View {
             Image(uiImage: image)
                 .resizable()
                 .scaledToFit()
+                .clipShape(RoundedRectangle(cornerRadius: 15))
+                .frame(width: 343, height: 257, alignment: .center)
+                
         }
     }
 }
 
 #Preview {
-    ImageStackView(imageCachingService: ImageCachingService(), imageURL: URL(string: "https://www.atorus.ru/sites/default/files/upload/image/News/56149/Club_Priv%C3%A9_by_Belek_Club_House.jpg")!)
+    ImageView(imageURL: URL(string: "https://www.atorus.ru/sites/default/files/upload/image/News/56149/Club_Priv%C3%A9_by_Belek_Club_House.jpg")!)
 }
