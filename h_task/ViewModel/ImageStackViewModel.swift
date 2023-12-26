@@ -6,3 +6,21 @@
 //
 
 import Foundation
+
+
+class ImageStackViewModel {
+    
+    @Published var imageStack: [URLCache]?
+    @Published var imageURL: [URL]
+    
+    init(imageURL: [URL]) {
+        self.imageURL = imageURL
+    }
+    
+    func fetchImage() {
+        for url in imageURL {
+           // Реализовать сохранение изображений
+        }
+    }
+    
+}

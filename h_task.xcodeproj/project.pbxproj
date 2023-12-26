@@ -20,6 +20,7 @@
 		ED2036DE2B38A0160022BD25 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ED2036DD2B38A0160022BD25 /* Preview Assets.xcassets */; };
 		ED2036E52B38B21E0022BD25 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED2036E42B38B21E0022BD25 /* AppCoordinator.swift */; };
 		ED2036E72B38B3790022BD25 /* HotelViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED2036E62B38B3790022BD25 /* HotelViewModel.swift */; };
+		ED5C22622B3A876000FB10FC /* ImageCachingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED5C22612B3A876000FB10FC /* ImageCachingService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,7 @@
 		ED2036DD2B38A0160022BD25 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		ED2036E42B38B21E0022BD25 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		ED2036E62B38B3790022BD25 /* HotelViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotelViewModel.swift; sourceTree = "<group>"; };
+		ED5C22612B3A876000FB10FC /* ImageCachingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCachingService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +78,7 @@
 			isa = PBXGroup;
 			children = (
 				ED2036E42B38B21E0022BD25 /* AppCoordinator.swift */,
+				ED5C22612B3A876000FB10FC /* ImageCachingService.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -205,6 +208,7 @@
 				ED2036D72B38A0130022BD25 /* h_taskApp.swift in Sources */,
 				ED18F2932B39F76E00FB1D35 /* RoomView.swift in Sources */,
 				ED18F2972B39F7B200FB1D35 /* ConfirmView.swift in Sources */,
+				ED5C22622B3A876000FB10FC /* ImageCachingService.swift in Sources */,
 				ED2036E52B38B21E0022BD25 /* AppCoordinator.swift in Sources */,
 				ED18F2A02B3A110200FB1D35 /* ImageStackView.swift in Sources */,
 			);
