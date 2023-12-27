@@ -6,10 +6,11 @@
 //
 
 import Foundation
+import SwiftUI
 
 struct ImageModel: Identifiable {
     
     let id = UUID()
-    let imageURL: URL
+    let image: UIImage
     
 }
