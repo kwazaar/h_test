@@ -30,17 +30,16 @@ struct ImageView<Content: View, T:Identifiable> : View {
     var body: some View {
         ZStack(alignment: .bottom) {
             GeometryReader { proxy in
-                let width = (proxy.size.width - trailingSpace)
-                let heightImage = CGFloat(257)
+                let width = (proxy.size.width - trailingSpace - spacing)
                 let adjustmentWidth = (trailingSpace / 2) - spacing
                 HStack(spacing: spacing){
                     ForEach(list) { item in
                         content(item)
-                            .frame(width: width, height: heightImage)
+                            .frame(width: width)
                     }
                 }
                 .padding(.horizontal, spacing)
-                .offset(x:(CGFloat(currentIndex) * -width) + (currentIndex != 0 ? adjustmentWidth : 0) + offset)
+                .offset(x:(CGFloat(currentIndex) * -width) + (currentIndex != 0 ? adjustmentWidth - 20: 0) + offset)
                 .gesture(
                     
                     DragGesture()
