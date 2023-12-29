@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		ED0140192B3F08B300B1D717 /* CellPeculiarities.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED0140182B3F08B300B1D717 /* CellPeculiarities.swift */; };
+		ED01401D2B3F38A700B1D717 /* WrappingHStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED01401C2B3F38A700B1D717 /* WrappingHStack.swift */; };
+		ED0140222B3F4A0B00B1D717 /* CellHotelAbout.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED0140212B3F4A0B00B1D717 /* CellHotelAbout.swift */; };
 		ED18F2932B39F76E00FB1D35 /* RoomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED18F2922B39F76E00FB1D35 /* RoomView.swift */; };
 		ED18F2952B39F79100FB1D35 /* BookingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED18F2942B39F79100FB1D35 /* BookingView.swift */; };
 		ED18F2972B39F7B200FB1D35 /* ConfirmView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED18F2962B39F7B200FB1D35 /* ConfirmView.swift */; };
@@ -25,6 +28,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		ED0140182B3F08B300B1D717 /* CellPeculiarities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellPeculiarities.swift; sourceTree = "<group>"; };
+		ED01401C2B3F38A700B1D717 /* WrappingHStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WrappingHStack.swift; sourceTree = "<group>"; };
+		ED0140212B3F4A0B00B1D717 /* CellHotelAbout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellHotelAbout.swift; sourceTree = "<group>"; };
 		ED18F2922B39F76E00FB1D35 /* RoomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomView.swift; sourceTree = "<group>"; };
 		ED18F2942B39F79100FB1D35 /* BookingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingView.swift; sourceTree = "<group>"; };
 		ED18F2962B39F7B200FB1D35 /* ConfirmView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmView.swift; sourceTree = "<group>"; };
@@ -54,6 +60,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		ED0140172B3F086000B1D717 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				ED0140182B3F08B300B1D717 /* CellPeculiarities.swift */,
+				ED0140212B3F4A0B00B1D717 /* CellHotelAbout.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		ED01401E2B3F395400B1D717 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				ED01401C2B3F38A700B1D717 /* WrappingHStack.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		ED18F29A2B3A103100FB1D35 /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -114,6 +137,8 @@
 			isa = PBXGroup;
 			children = (
 				ED2036D62B38A0130022BD25 /* h_taskApp.swift */,
+				ED0140172B3F086000B1D717 /* Cells */,
+				ED01401E2B3F395400B1D717 /* Extensions */,
 				ED18F2A12B3A11EC00FB1D35 /* Model */,
 				ED18F29C2B3A107A00FB1D35 /* Service */,
 				ED18F29B2B3A106700FB1D35 /* ViewModel */,
@@ -214,10 +239,13 @@
 				ED18F2952B39F79100FB1D35 /* BookingView.swift in Sources */,
 				ED33C7962B3B4CF50043C939 /* NetworkService.swift in Sources */,
 				ED2036D72B38A0130022BD25 /* h_taskApp.swift in Sources */,
+				ED01401D2B3F38A700B1D717 /* WrappingHStack.swift in Sources */,
 				ED18F2932B39F76E00FB1D35 /* RoomView.swift in Sources */,
+				ED0140192B3F08B300B1D717 /* CellPeculiarities.swift in Sources */,
 				ED18F2972B39F7B200FB1D35 /* ConfirmView.swift in Sources */,
 				ED5C22622B3A876000FB10FC /* ImageCachingService.swift in Sources */,
 				ED2036E52B38B21E0022BD25 /* AppCoordinator.swift in Sources */,
+				ED0140222B3F4A0B00B1D717 /* CellHotelAbout.swift in Sources */,
 				ED18F2A02B3A110200FB1D35 /* ImageView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

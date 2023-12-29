@@ -29,7 +29,6 @@ struct HotelView: View {
                                 let size = geometry.size
                                 Image(uiImage: image.image)
                                     .resizable()
-                                //                            .aspectRatio(contentMode: .fit)
                                     .clipShape(RoundedRectangle(cornerRadius: 15))
                                     .frame(width: size.width)
                                 
@@ -41,14 +40,14 @@ struct HotelView: View {
                                 Rectangle()
                                     .frame(width: 149, height: 29)
                                     .clipShape(RoundedRectangle(cornerRadius: 5))
-                                    .foregroundColor(Color(UIColor(named: "ratingBackground")!))
+                                    .foregroundColor(Color(red: 1, green: 0.780, blue: 0))
                                     .opacity(0.2)
                                 HStack(alignment: .center) {
                                     Image(systemName: "star.fill")
                                     Text("\(viewModel.hotel.rating) \(viewModel.hotel.rating_name)")
                                         .font(.system(size: 16, weight: .medium))
                                 }
-                                .foregroundColor(Color(UIColor(named: "ratingTitle")!))
+                                .foregroundColor(Color(red: 1, green: 0.659, blue: 0))
                                 
                             }
                             Text(viewModel.hotel.name)
@@ -73,9 +72,12 @@ struct HotelView: View {
                         Rectangle()
                             .foregroundColor(.white)
                             .clipShape(RoundedRectangle(cornerRadius: 20))
-                        VStack() {
+                        VStack(alignment: .leading) {
                             Text("Об отеле")
                                 .font(.system(size: 22, weight: .medium))
+                            CellPeculiarities(list: viewModel.hotel.about_the_hotel.peculiarities)
+                            Text(viewModel.hotel.about_the_hotel.description)
+                            CellHotelAbout(icon: viewModel.icon, title: viewModel.title)
                         }
                         .padding()
                     }

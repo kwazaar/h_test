@@ -14,6 +14,8 @@ class HotelViewModel: ObservableObject {
     
     @Published var hotel = Hotel(id: 0, name: "", adress: "", minimal_price: 0, price_for_it: "", rating: 5, rating_name: "", image_urls: [], about_the_hotel: AboutTheHotel(description: "", peculiarities: []))
     @Published var images: [ImageModel] = []
+    @Published var icon = ["emoji", "tickSquare", "closeSquare"]
+    @Published var title = ["Удобства", "Что включено", "Что не включено"]
     
     func loadData() {
         NetworkService.shared.fetchData { result in
@@ -28,7 +30,6 @@ class HotelViewModel: ObservableObject {
                             self.images.append(ImageModel(image: uiImage))
                         }
                     }
-                    
                 }
             case .failure(let failure):
                 print(failure.localizedDescription)
