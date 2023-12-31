@@ -53,7 +53,7 @@ struct HotelView: View {
                             Text(viewModel.hotel.name)
                                 .font(.system(size: 22))
                                 .lineLimit(2)
-                            Text(viewModel.hotel.adress)
+                            Button(viewModel.hotel.adress){ }
                                 .font(.system(size: 14))
                                 .foregroundStyle(.blue)
                             HStack {
@@ -97,7 +97,7 @@ struct HotelView: View {
             .frame(width: UIScreen.main.bounds.width - 40, height: 50, alignment: .center)
             .foregroundColor(.white)
             .background(.blue)
-            .cornerRadius(30)
+            .cornerRadius(15)
         }
         
         .navigationTitle("Отель")

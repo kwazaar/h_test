@@ -13,11 +13,11 @@ class NetworkService {
     
     private init() {}
     
-    func fetchData(completion: @escaping (Result<Hotel, Error>) -> ()) {
-        if let url = URL(string: "https://run.mocky.io/v3/d144777c-a67f-4e35-867a-cacc3b827473") {
+    func fetchData<T: Decodable>(from url: String, responseType: T.Type, completion: @escaping (Result<T, Error>) -> ()) {
+        if let url = URL(string: url) {
             
             URLSession.shared.dataTask(with: url) { (data, _, error) in
-                let data = try! JSONDecoder().decode(Hotel.self, from: data!)
+                let data = try! JSONDecoder().decode(T.self, from: data!)
                 DispatchQueue.main.async {
                     completion(.success(data))
                 }

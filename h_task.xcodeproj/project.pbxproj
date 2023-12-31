@@ -22,6 +22,8 @@
 		ED2036DE2B38A0160022BD25 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ED2036DD2B38A0160022BD25 /* Preview Assets.xcassets */; };
 		ED2036E52B38B21E0022BD25 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED2036E42B38B21E0022BD25 /* AppCoordinator.swift */; };
 		ED2036E72B38B3790022BD25 /* HotelViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED2036E62B38B3790022BD25 /* HotelViewModel.swift */; };
+		ED2DF4FF2B407A46004F67AA /* RoomViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED2DF4FE2B407A46004F67AA /* RoomViewModel.swift */; };
+		ED2DF5012B407BA7004F67AA /* RoomModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED2DF5002B407BA7004F67AA /* RoomModel.swift */; };
 		ED33C7912B3B4B680043C939 /* HotelModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED33C7902B3B4B680043C939 /* HotelModel.swift */; };
 		ED33C7962B3B4CF50043C939 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED33C7952B3B4CF50043C939 /* NetworkService.swift */; };
 		ED5C22622B3A876000FB10FC /* ImageCachingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED5C22612B3A876000FB10FC /* ImageCachingService.swift */; };
@@ -44,6 +46,8 @@
 		ED2036DD2B38A0160022BD25 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		ED2036E42B38B21E0022BD25 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		ED2036E62B38B3790022BD25 /* HotelViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotelViewModel.swift; sourceTree = "<group>"; };
+		ED2DF4FE2B407A46004F67AA /* RoomViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomViewModel.swift; sourceTree = "<group>"; };
+		ED2DF5002B407BA7004F67AA /* RoomModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomModel.swift; sourceTree = "<group>"; };
 		ED33C7902B3B4B680043C939 /* HotelModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotelModel.swift; sourceTree = "<group>"; };
 		ED33C7952B3B4CF50043C939 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		ED5C22612B3A876000FB10FC /* ImageCachingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCachingService.swift; sourceTree = "<group>"; };
@@ -94,6 +98,7 @@
 			isa = PBXGroup;
 			children = (
 				ED2036E62B38B3790022BD25 /* HotelViewModel.swift */,
+				ED2DF4FE2B407A46004F67AA /* RoomViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -113,6 +118,7 @@
 			children = (
 				ED18F2A22B3A11F800FB1D35 /* ImageModel.swift */,
 				ED33C7902B3B4B680043C939 /* HotelModel.swift */,
+				ED2DF5002B407BA7004F67AA /* RoomModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -241,8 +247,10 @@
 				ED2036D72B38A0130022BD25 /* h_taskApp.swift in Sources */,
 				ED01401D2B3F38A700B1D717 /* WrappingHStack.swift in Sources */,
 				ED18F2932B39F76E00FB1D35 /* RoomView.swift in Sources */,
+				ED2DF4FF2B407A46004F67AA /* RoomViewModel.swift in Sources */,
 				ED0140192B3F08B300B1D717 /* CellPeculiarities.swift in Sources */,
 				ED18F2972B39F7B200FB1D35 /* ConfirmView.swift in Sources */,
+				ED2DF5012B407BA7004F67AA /* RoomModel.swift in Sources */,
 				ED5C22622B3A876000FB10FC /* ImageCachingService.swift in Sources */,
 				ED2036E52B38B21E0022BD25 /* AppCoordinator.swift in Sources */,
 				ED0140222B3F4A0B00B1D717 /* CellHotelAbout.swift in Sources */,

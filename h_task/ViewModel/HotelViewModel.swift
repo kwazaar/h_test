@@ -11,14 +11,14 @@ import Combine
 
 class HotelViewModel: ObservableObject {
     
-    
+    private var apiURL = "https://run.mocky.io/v3/d144777c-a67f-4e35-867a-cacc3b827473"
     @Published var hotel = Hotel(id: 0, name: "", adress: "", minimal_price: 0, price_for_it: "", rating: 5, rating_name: "", image_urls: [], about_the_hotel: AboutTheHotel(description: "", peculiarities: []))
     @Published var images: [ImageModel] = []
     @Published var icon = ["emoji", "tickSquare", "closeSquare"]
     @Published var title = ["Удобства", "Что включено", "Что не включено"]
     
     func loadData() {
-        NetworkService.shared.fetchData { result in
+        NetworkService.shared.fetchData(from: apiURL, responseType: Hotel.self) { result in
             switch result {
             case .success(let data):
                 self.hotel = data
