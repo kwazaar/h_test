@@ -11,6 +11,7 @@ import SwiftUI
 struct ImageModel: Identifiable {
     
     let id = UUID()
+    let roomID: Int
     let image: UIImage
     
 }

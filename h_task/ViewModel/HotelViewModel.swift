@@ -27,7 +27,7 @@ class HotelViewModel: ObservableObject {
                     let imageCachingService = ImageCachingService()
                     imageCachingService.loadImage(from: URL(string: stringURL)!) { uiImage in
                         if let uiImage = uiImage {
-                            self.images.append(ImageModel(image: uiImage))
+                            self.images.append(ImageModel(roomID: 0, image: uiImage))
                         }
                     }
                 }

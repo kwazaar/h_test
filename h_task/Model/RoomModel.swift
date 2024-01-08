@@ -22,9 +22,3 @@ struct HotelData: Codable, Hashable {
     var rooms: [Room]
 }
 
-struct CellRoom: Identifiable {
-    
-    var id: Int
-    var images: [ImageModel]
-    
-}

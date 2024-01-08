@@ -19,11 +19,7 @@ struct HotelView: View {
     var body: some View {
         VStack{
             ScrollView {
-                ZStack(alignment: .top) {
-                    Rectangle()
-                        .foregroundColor(.white)
-                        .clipShape(RoundedRectangle(cornerRadius: 20))
-                    VStack() {
+                    VStack {
                         ImageView(index: $currentIndex, items: viewModel.images) { image in
                             GeometryReader { geometry in
                                 let size = geometry.size
@@ -36,20 +32,15 @@ struct HotelView: View {
                         }
                         .frame(height: 257)
                         VStack(alignment: .leading) {
-                            ZStack{
-                                Rectangle()
-                                    .frame(width: 149, height: 29)
-                                    .clipShape(RoundedRectangle(cornerRadius: 5))
-                                    .foregroundColor(Color(red: 1, green: 0.780, blue: 0))
-                                    .opacity(0.2)
-                                HStack(alignment: .center) {
-                                    Image(systemName: "star.fill")
-                                    Text("\(viewModel.hotel.rating) \(viewModel.hotel.rating_name)")
-                                        .font(.system(size: 16, weight: .medium))
-                                }
-                                .foregroundColor(Color(red: 1, green: 0.659, blue: 0))
-                                
+                            HStack(alignment: .center) {
+                                Image(systemName: "star.fill")
+                                Text("\(viewModel.hotel.rating) \(viewModel.hotel.rating_name)")
+                                    .font(.system(size: 16, weight: .medium))
                             }
+                            .padding(3)
+                            .background(Color(red: 1, green: 0.780, blue: 0, opacity: 0.2))
+                            .cornerRadius(5)
+                            .foregroundColor(Color(red: 1, green: 0.780, blue: 0))
                             Text(viewModel.hotel.name)
                                 .font(.system(size: 22))
                                 .lineLimit(2)
@@ -66,22 +57,20 @@ struct HotelView: View {
                         }
                         .padding()
                     }
-                }
+                    .background(Color(.white))
+                    .cornerRadius(20)
                 VStack {
-                    ZStack(alignment: .topLeading) {
-                        Rectangle()
-                            .foregroundColor(.white)
-                            .clipShape(RoundedRectangle(cornerRadius: 20))
-                        VStack(alignment: .leading) {
-                            Text("Об отеле")
-                                .font(.system(size: 22, weight: .medium))
-                            CellPeculiarities(list: viewModel.hotel.about_the_hotel.peculiarities)
-                            Text(viewModel.hotel.about_the_hotel.description)
-                            CellHotelAbout(icon: viewModel.icon, title: viewModel.title)
-                        }
-                        .padding()
+                    VStack(alignment: .leading) {
+                        Text("Об отеле")
+                            .font(.system(size: 22, weight: .medium))
+                        CellPeculiarities(list: viewModel.hotel.about_the_hotel.peculiarities)
+                        Text(viewModel.hotel.about_the_hotel.description)
+                        CellHotelAbout(icon: viewModel.icon, title: viewModel.title)
                     }
+                    .padding()
                 }
+                .background(Color(.white))
+                .cornerRadius(20)
                 
             }
             .background(Color(.systemGroupedBackground))
