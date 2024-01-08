@@ -16,16 +16,23 @@ struct RoomView: View {
         ScrollView {
             
             ForEach(viewModel.hotelData.rooms) { room in
-                Text(room.name)
+                VStack {
+                    Text(room.name)
+                    Button(action: {
+                        coordinator.push(.booking)
+                    }, label: {
+                        Text("Выбрать номер")
+                    })
+                    .frame(width: UIScreen.main.bounds.width - 40, height: 50, alignment: .center)
+                    .foregroundColor(.white)
+                    .background(.blue)
+                    .cornerRadius(15)
+                }
+                
             }
-            Button(action: {
-                coordinator.push(.booking)
-            }, label: {
-                Text("Экран бронирования")
-            })
-            .onAppear {
-                viewModel.loadData()
-            }
+        }
+        .onAppear {
+            viewModel.loadData()
         }
     }
 }
