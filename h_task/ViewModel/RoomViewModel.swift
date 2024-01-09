@@ -14,10 +14,9 @@ class RoomViewModel: ObservableObject {
     @Published var hotelData = HotelData(rooms: [])
     @Published var images: [ImageModel] = []
     var stringURL: [String] = []
-    private var apiURL = "https://run.mocky.io/v3/8b532701-709e-4194-a41c-1a903af00195"
     
     func loadData() {
-        NetworkService.shared.fetchData(from: apiURL, responseType: HotelData.self) { result in
+        NetworkService.shared.fetchData(from: .room, responseType: HotelData.self) { result in
             switch result {
             case .success(let data):
                 self.hotelData = data

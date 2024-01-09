@@ -17,9 +17,14 @@ struct HotelView: View {
     
     
     var body: some View {
-        VStack{
+        VStack {
+            HStack {
+                Text("Отель")
+            }
+            .font(.headline)
             ScrollView {
-                    VStack {
+                if !viewModel.images.isEmpty {
+                    VStack(alignment: .leading) {
                         ImageView(index: $currentIndex, items: viewModel.images) { image in
                             GeometryReader { geometry in
                                 let size = geometry.size
@@ -30,7 +35,8 @@ struct HotelView: View {
                                 
                             }
                         }
-                        .frame(height: 257)
+                        .frame(height: UIScreen.main.bounds.width * 0.65)
+                        .padding(.vertical)
                         VStack(alignment: .leading) {
                             HStack(alignment: .center) {
                                 Image(systemName: "star.fill")
@@ -41,21 +47,27 @@ struct HotelView: View {
                             .background(Color(red: 1, green: 0.780, blue: 0, opacity: 0.2))
                             .cornerRadius(5)
                             .foregroundColor(Color(red: 1, green: 0.780, blue: 0))
-                            Text(viewModel.hotel.name)
-                                .font(.system(size: 22))
-                                .lineLimit(2)
-                            Button(viewModel.hotel.adress){ }
-                                .font(.system(size: 14))
-                                .foregroundStyle(.blue)
-                            HStack {
-                                Text("от \(viewModel.hotel.minimal_price) ₽")
-                                    .font(.system(size: 30))
-                                    .bold()
+                            VStack {
+                                Text(viewModel.hotel.name)
+                                    .font(.system(size: 22))
+                                    .lineLimit(2)
+                                    .padding(.bottom, 5)
+                                Button(viewModel.hotel.adress){ }
+                                    .font(.system(size: 14))
+                                    .foregroundStyle(.blue)
+                            }
+                            .padding(.bottom, 10)
+                            HStack(alignment: .bottom) {
+                            Text("от \(viewModel.hotel.minimal_price) ₽")
+                                .font(.system(size: 30))
+                                .bold()
                                 Text(viewModel.hotel.price_for_it)
                                     .foregroundStyle(.gray)
+                                
                             }
+                            .padding(.bottom, 10)
                         }
-                        .padding()
+                        .padding(.horizontal)
                     }
                     .background(Color(.white))
                     .cornerRadius(20)
@@ -65,13 +77,14 @@ struct HotelView: View {
                             .font(.system(size: 22, weight: .medium))
                         CellPeculiarities(list: viewModel.hotel.about_the_hotel.peculiarities)
                         Text(viewModel.hotel.about_the_hotel.description)
+                            .padding(.vertical, 10)
                         CellHotelAbout(icon: viewModel.icon, title: viewModel.title)
                     }
                     .padding()
                 }
                 .background(Color(.white))
                 .cornerRadius(20)
-                
+                }
             }
             .background(Color(.systemGroupedBackground))
             
@@ -88,9 +101,7 @@ struct HotelView: View {
             .background(.blue)
             .cornerRadius(15)
         }
-        
-        .navigationTitle("Отель")
-        .navigationBarTitleDisplayMode(.inline)
+        .navigationBarHidden(true)
     }
     
 }
