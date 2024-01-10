@@ -13,10 +13,10 @@ struct CustomTextFieldStyle: TextFieldStyle {
     func _body(configuration: TextField<Self._Label>) -> some View {
         return configuration
             .textFieldStyle(.plain)
-            .padding(.horizontal, 8)
-            .frame(height: 45)
+//            .padding(.vertical, 10)
+            .frame(height: 52)
             .cornerRadius(10)
-            .foregroundColor(.white)
+            .foregroundColor(.black)
             .autocorrectionDisabled()
             .textInputAutocapitalization(.never)
     }
